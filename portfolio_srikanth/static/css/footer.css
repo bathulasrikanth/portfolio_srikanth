@@ -1,0 +1,73 @@
+/* General Footer Styling */
+footer {
+    background-color: #333; /* Dark background for contrast */
+    color: white;          /* White text for readability */
+    text-align: center;    /* Centered content */
+    font-size: 1rem;       /* Standard font size */
+    position: relative;    /* Ensures proper placement */
+    
+}
+
+/* Footer Container */
+footer .container {
+    max-width: 1200px;     /* Limits the container width */
+    margin: 0 auto;        /* Center the container */
+    padding: 0 15px;       /* Adds padding for small screens */
+}
+
+/* Footer Links */
+footer a {
+    color: #4CAF50;        /* Green color for links */
+    text-decoration: none; /* Remove underline */
+    margin: 0 10px;        /* Space between links */
+    font-weight: bold;     /* Bold text for emphasis */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+footer a:hover {
+    color: #ff5722;        /* Change link color on hover */
+}
+
+/* Copyright Text */
+footer p {
+    margin: 10px 0;        /* Space above and below */
+    font-size: 0.9rem;     /* Slightly smaller font size */
+    line-height: 1.5;      /* Improved readability */
+}
+
+/* Social Media Icons (Optional) */
+footer .social-icons a {
+    display: inline-block;
+    margin: 0 5px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: #444; /* Circle background */
+    color: white;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+footer .social-icons a:hover {
+    background-color: #4CAF50; /* Green background on hover */
+    transform: scale(1.1);    /* Slightly enlarge the icon */
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    footer {
+        font-size: 0.85rem;    /* Smaller font size for mobile */
+    }
+
+    footer a {
+        margin: 0 5px;         /* Reduce spacing between links */
+    }
+
+    footer .social-icons a {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 1rem;
+    }
+}

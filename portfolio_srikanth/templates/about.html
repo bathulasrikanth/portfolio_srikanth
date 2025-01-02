@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About_Me</title>
+    <link href="{% static 'css/nav.css' %}" rel="stylesheet">
+    <link href="{% static 'css/about.css' %}" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo" title="SRIKANTH's Portfolio"><a href="{% url 'home' %}"><img src="{% static 'srikanth28.png' %}" alt="Logo"></a></div>
+
+
+        <ul class="nav-links">
+          <li><a href="{% url 'home' %}" title="Home page">Home</a></li>
+          <li><a href="{% url 'about' %}" title="About ">About</a></li>
+          <li class="dropdown">
+            <a href="{% url 'projects' %}" title="Projects-mini and Major">Projects</a>
+
+          </li>
+          <li><a href="{% url 'contact1' %}" title="contact me">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="about">
+        <h2>ABOUT <b style="color: red;">ME</b></h2>
+      </div>
+      <div class="left">
+        <img src="{% static 'linkedin1.jpg' %}" height="400px" width="300px">
+      </div>
+      <div class="right">
+        <p>
+          I am Srikanth, a BTech student at Sri Indu College of Engineering and Technology, 
+          <br>specializing in computer science. As a passionate Python developer, I have <br>
+           developed expertise in building full-stack applications and working with Django <br>
+           for backend development. I am constantly learning and applying my skills to create <br>
+           efficient, scalable web solutions. With a strong foundation in both frontend and <br>
+           backend technologies, I aim to deliver seamless, user-friendly experiences. <br>
+           My dedication to continuous growth drives me to take on challenging projects and <br>
+           improve my development capabilities.
+        </p>
+        <div class="data">
+          <ul >
+            <li>
+              Date Of Birth:28-04-2005
+            </li>
+            <li>Address: Polkampally,MBNR,509324</li>
+            <li>
+               Phn No.:9381778415  
+            </li>                  
+            <li>E-mail:srikanthirupathaiah@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="intrest">
+        <h1>INTR<b style="color: rgb(219, 10, 10);">EST's</b></h1><br>
+      </div>
+      <div class="lang">
+      <ul>
+        <li>
+          Python
+        </li>
+        <li>
+          Django
+        </li>
+        <li>
+          Sql
+        </li>
+        <li>
+          Frontend
+        </li>
+      </ul>
+    </div>
+      
+      <div class="certifications">
+        <div class="header">
+          <h1 >Certifications</h1>
+        </div>
+        <div>
+              {% for i in c %}
+                  <img src="{{ i.image.url }}" alt="Image" />
+                  <h2>{{ i.name }}</h2>
+              {% endfor %}
+          </div>
+      </div>
+      </div>
+<div>
+        {% for project in ci %}
+            <div class="project">
+                <h2>{{ project.title }}</h2>
+                <p>{{ project.description }}</p>
+                <p><strong>Technologies:</strong> {{ project.technologies_used }}</p>
+                {% if project.image %}
+                    <img src="{{ project.image.url }}" alt="{{ project.title }}" height="100px" width="100px">
+                {% endif %}
+                {% if project.link %}
+                    <p><a href="{{ project.link }}" target="_blank">View Project</a></p>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

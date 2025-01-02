@@ -1,0 +1,134 @@
+/* General styling for the body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ABOUT ME Header styling */
+.about {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Left and Right sections styling */
+.left, .right {
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px;
+}
+
+.left img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Right section text styling */
+.right p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.data ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1rem;
+}
+
+.data li {
+    margin: 10px 0;
+}
+
+/* Interests styling */
+.intrest {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.intrest h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.second ol {
+    text-align: center;
+    list-style-type: decimal;
+    font-size: 1rem;
+    margin: 0 auto;
+    display: inline-block;
+    padding: 0;
+}
+
+.second li {
+    margin: 10px 0;
+}
+
+/* Certifications styling */
+.certifications {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.certifications .header h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.certifications div img {
+    max-width: 100px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Projects section styling */
+.project {
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 800px;
+}
+
+.project img {
+    margin-top: 10px;
+    border-radius: 6px;
+}
+
+.project h2 {
+    font-size: 1.5rem;
+    color: #2d89ef;
+}
+
+.project p {
+    font-size: 1rem;
+    color: #555;
+    margin: 8px 0;
+}
+
+.project a {
+    display: inline-block;
+    background: #4a90e2;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.project a:hover {
+    background: #357abd;
+}

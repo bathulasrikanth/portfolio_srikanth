@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact_Me</title>
+    {% load static %}
+    <link href="{% static 'css/contact.css' %}" rel="stylesheet">
+</head>
+<body>
+    
+    <table>
+       
+        <form method="post">{% csrf_token %}
+            <tr>
+                <th>
+                    Name:
+                </th>
+                <td>
+                    <input type="text" name="name" placeholder="Full Name">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Email-Id:
+                </th>
+                <td>
+                    <input type="email" name="email" placeholder="mail id">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Phone:
+                </th>
+                <td>
+                    <input type="tel" name="number" placeholder="Mobile Number">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Message:
+                </th>
+                <td>
+                    <textarea placeholder=" Write some thing here "></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <td>
+                        <button style="width: 100%; padding: 10px;" type="submit" >Contact</button>
+                    </td>
+                </th>
+            </tr>
+            
+        </form>
+    </table>
+
+    <a href="{% url 'home' %}">Home page</a>
+    
+</body>
+</html>

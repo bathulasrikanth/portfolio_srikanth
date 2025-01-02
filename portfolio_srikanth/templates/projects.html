@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    {% load static %}
+    <link href="{% static 'css/projects.css' %}" rel="stylesheet">
+    <link href="{% static 'css/nav.css' %}" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+      <div class="logo" title="SRIKANTH's Portfolio"><a href="{% url 'home' %}"><img src="{% static 'srikanth28.png' %}" alt="Logo"></a></div>
+      <ul class="nav-links">
+          <li><a href="#home" title="Home page">Home</a></li>
+          <li><a href="{% url 'about' %}" title="About">About</a></li>
+          <li class="dropdown">
+            <a href="{% url 'projects' %}" title="Projects">Projects</a>
+            
+          </li>
+          <li><a href="{% url 'contact1' %}" title="Contact me">Contact</a></li>
+        </ul>
+      </nav>
+    <h1 class="header">My Projects</h1>
+    <div  class="projects">  
+        {% for project in projects %}
+            <div class="projects">
+                <h2>{{ project.title }}</h2>
+                <p>{{ project.description }}</p>
+                <p><strong>Technologies:</strong> {{ project.technologies_used }}</p>
+                {% if project.image %}
+                    <img src="{{ project.image.url }}" alt="{{ project.title }}" height="200px" width="190px">
+                {% endif %}
+                {% if project.link %}
+                    <p><a href="{{ project.link }}" target="_blank">View Project</a></p>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
